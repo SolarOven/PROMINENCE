@@ -1,5 +1,5 @@
 __author__="SolarOven"
-__version__==2.0
+__version__=2.1
 
 '''
 用法：
@@ -82,10 +82,15 @@ def boo(x=' '):
         print('')
 
 def puu(*a):
-    if len(a)==1 and isinstance(a[0],str):
-        disolve(a[0])
-    else:
-        h=''
-        for i in a:
-            h+=(str(i)+' ')
-        disolve(h)
+        if len(a)==1 and isinstance(a[0],str):
+            disolve(a[0])
+        else:
+        
+            h=''
+            for i in a:
+                w=str(i)
+
+                if ' ' in w:
+                    w=w.replace(' ','')
+                h+=(w+' ')
+            disolve(h)
